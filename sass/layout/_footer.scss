@@ -1,0 +1,47 @@
+@import '../abstract/mixins';
+
+.footer{
+    &__in{
+        padding-top: 75px;
+        padding-bottom: 25px;
+    }
+    .row{
+        display: flex;
+        gap: 10px;
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        width: 150px;
+    }
+    &__link{
+        color: #191919;
+        font-size: 18px;
+    }
+
+    .col2{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        h3{
+            font-size: 18px;
+            
+        }
+        p{
+            color: #A0A0A0;
+            border-bottom: 3px solid black;
+            padding-bottom: 50px;
+            max-width: 500px;
+        }
+    }
+
+    &__bottom{
+        margin-top: 20px;
+        display: flex;
+        justify-content: flex-end;
+        gap: 20px;
+        color: #A0A0A0;
+    }
+}

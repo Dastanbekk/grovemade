@@ -1,0 +1,162 @@
+@import '../abstract/mixins';
+
+.inspires{
+    &__in{
+        padding: 80px 0 120px 0;
+    }
+    &__title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        text-align: center;
+        line-height: 33px;
+    }
+    &__desc{
+        margin-top: 23px;
+        @include font-16;
+        display: flex;
+        line-height: 24px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__link{
+        margin-top: 26px;
+        display: flex;
+        justify-content: center;
+        a{
+            display: inline-block;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            text-align: center;
+            color: black;
+            font-size: 14px;
+            &::after{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 2px;
+                transition: 0.6s;
+            }
+            &:hover::after{
+                width: 100%;
+                background-color: black;
+            }
+        }
+    }
+
+    &__cards{
+        margin-top: 80px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    &__card{
+        img{
+            max-width: 658px;
+            width: 100%;
+        }
+        &-title{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 24px;
+            font-size: 14px;
+
+        }
+        &-desc{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 12px;
+            font-size: 12px;
+            color: black;
+        }
+    }
+}
+
+@media (min-width:950px) {
+    .inspires{
+        &__in{
+            padding: 80px 0 120px 0;
+        }
+        &__title{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 36px;
+            text-align: center;
+            line-height: 33px;
+        }
+        &__desc{
+            margin-top: 23px;
+            @include font-16;
+            display: flex;
+            line-height: 24px;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        &__link{
+            margin-top: 26px;
+            display: flex;
+            justify-content: center;
+            a{
+                display: inline-block;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                text-align: center;
+                color: black;
+                font-size: 22px;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 0;
+                    height: 2px;
+                    transition: 0.6s;
+                }
+                &:hover::after{
+                    width: 100%;
+                    background-color: black;
+                }
+            }
+        }
+    
+        &__cards{
+            margin-top: 80px;
+            display: grid;
+            grid-template-columns: auto auto;
+        }
+    
+        &__card{
+            img{
+                max-width: 658px;
+                width: 100%;
+            }
+            &-title{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 24px;
+                font-size: 24px;
+    
+            }
+            &-desc{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 12px;
+                font-size: 14px;
+                color: black;
+            }
+        }
+    }
+}

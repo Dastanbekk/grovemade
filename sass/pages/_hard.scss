@@ -1,0 +1,37 @@
+@import '../abstract/mixins';
+
+.hard{
+    padding-top: 60px;
+    padding-bottom: 42px;
+    &__title{
+        font-size: 24px;
+        text-align: center;
+    }
+    &__desc{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 10px;
+        p{
+            max-width: 772px;
+            @include font-16;
+        }
+    }
+    &__img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 23px;
+        img{
+            max-width: 1050px;
+            width: 100%;
+        }
+    }
+}
+
+@media (min-width:500px) {
+    .hard{
+        padding-top: 120px;
+    }
+}
